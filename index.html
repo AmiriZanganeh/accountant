@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مهدی امیری | حسابدار</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Vazirmatn', sans-serif;
+      background: linear-gradient(135deg, #6a1b9a, #283593);
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+    nav {
+      background: rgba(0, 0, 0, 0.15);
+      padding: 15px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      font-size: 1rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      animation: fadeInUp 1s ease both;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #dcdcdc;
+      animation: fadeInUp 1s ease both;
+      animation-delay: 0.3s;
+    }
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 50px 20px;
+      border-radius: 15px;
+      background-color: rgba(255, 255, 255, 0.05);
+      text-align: center;
+      animation: fadeInUp 1s ease both;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+    p {
+      font-size: 1.1rem;
+      color: #e2e2e2;
+      margin: 10px 0;
+    }
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .card {
+      background: linear-gradient(135deg, #8e24aa, #3949ab);
+      color: #fff;
+      width: 260px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+      animation: fadeInUp 1s ease both;
+    }
+    .card h3 {
+      margin-bottom: 10px;
+    }
+    footer {
+      background: linear-gradient(to left, #6a1b9a, #283593);
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+      color: #ddd;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 768px) {
+      header h1 { font-size: 1.8rem; }
+      h2 { font-size: 1.5rem; }
+      .card-container { flex-direction: column; align-items: center; }
+      .card { width: 90%; }
+      section { padding: 30px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#about">درباره من</a>
+    <a href="#services">خدمات</a>
+    <a href="#resume">رزومه</a>
+    <a href="#contact">تماس با من</a>
+  </nav>
+
+  <header>
+    <h1>سلام! من مهدی امیری هستم</h1>
+    <p>حسابدار تازه‌کار | کمک حسابدار و کارآموز حسابداری</p>
+  </header>
+
+  <section id="about">
+    <h2>درباره من</h2>
+    <hr style="width:60px; border:2px solid #ffeeff; border-radius:3px; margin:0 auto 30px;" />
+    <p><strong>تحصیلات: </strong>هنرجو مقطع دوازدهم رشته حسابداری هنرستان شهید اینانلو با معدل سال پیش ۱۸/۸۱</p>
+    <p><strong>تخصص: </strong>مسلط به اصول حسابداری و مباحثی همچون خرید و فروش ، اموال و انبار ، حقوق و دستمزد</p>
+    <p><strong>زبان: </strong>فارسی ، انگلیسی</p>
+  </section>
+
+  <section id="services">
+    <h2>خدمات</h2>
+    <hr style="width:60px; border:2px solid #ffeeff; border-radius:3px; margin:0 auto 30px;" />
+    <div class="card-container">
+      <div class="card">
+        <h3>ثبت اسناد حسابداری</h3>
+        <p>ثبت معاملات روزانه در نرم‌افزارهای حسابداری</p>
+      </div>
+      <div class="card">
+        <h3>تهیه گزارش مالی</h3>
+        <p>ترازنامه، سود و زیان، گزارش‌های پایه</p>
+      </div>
+      <div class="card">
+        <h3>کمک در امور مالیاتی</h3>
+        <p>همکاری در تهیه اظهارنامه و گزارش‌های مالیاتی</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume" style="background-color: rgba(255,255,255,0.06);">
+    <h2>رزومه</h2>
+    <hr style="width:60px; border:2px solid #ffeeff; border-radius:3px; margin:0 auto 30px;" />
+    <div style="background-color: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; display: inline-block;">
+      <p><strong>شرکت کارن تجارت اورانوس(مدیران خودرو ۳۵۳) به عنوان کارآموز حسابداری</strong> (۱۴۰۴/۲/۳۰-اکنون)</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>تماس با من</h2>
+    <hr style="width:60px; border:2px solid #ffeeff; border-radius:3px; margin:0 auto 30px;" />
+    <p><strong>شماره تماس: </strong>۰۹۱۰۰۷۱۰۵۶۹</p>
+    <p><strong>ایمیل: </strong>amirizanganeh@gmail.com</p>
+  </section>
+
+  <footer>
+    <p>© ۲۰۲۵ تمامی حقوق این وب‌سایت محفوظ است</p>
+    <p>طراحی و توسعه توسط <strong>مهدی امیری</strong></p>
+  </footer>
+
+</body>
+</html>
