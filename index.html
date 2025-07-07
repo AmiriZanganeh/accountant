@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>مهدی امیری</title>
+  <title>مهدی امیری | حسابدار تازه کار</title>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
@@ -27,18 +27,86 @@
       color: var(--light);
       line-height: 1.8;
       min-height: 100vh;
-      padding: 20px;
+      padding-top: 80px;
     }
     
     .container {
       max-width: 1000px;
       margin: 0 auto;
+      padding: 20px;
+    }
+    
+    /* بهبود نوار ناوبری */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(26, 26, 46, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 12px 0;
+      z-index: 1000;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      border-bottom: 1px solid rgba(106, 90, 249, 0.3);
+    }
+    
+    .nav-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+    
+    .logo {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--secondary);
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo i {
+      margin-left: 10px;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 15px;
+    }
+    
+    .nav-links a {
+      color: var(--light);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-links a:hover, 
+    .nav-links a.active {
+      background: rgba(106, 90, 249, 0.2);
+      color: var(--secondary);
+    }
+    
+    /* منوی همبرگری برای موبایل */
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: var(--light);
+      font-size: 1.5rem;
+      z-index: 1001;
     }
     
     /* هدر */
     header {
       text-align: center;
-      padding: 40px 20px;
+      padding: 60px 20px 40px;
       margin-bottom: 30px;
     }
     
@@ -65,6 +133,7 @@
       margin-bottom: 30px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.15);
       border: 1px solid rgba(255,255,255,0.1);
+      scroll-margin-top: 100px;
     }
     
     h2 {
@@ -124,6 +193,12 @@
       font-size: 1.1rem;
       color: white;
       border: 1px solid rgba(255,255,255,0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .skill:hover {
+      background: rgba(106, 90, 249, 0.3);
+      transform: translateY(-3px);
     }
     
     /* خدمات */
@@ -160,6 +235,38 @@
       margin-bottom: 15px;
     }
     
+    /* تماس مستقیم */
+    .direct-contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 15px 30px;
+      background: rgba(66, 184, 131, 0.2);
+      border-radius: 30px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .contact-btn:hover {
+      background: rgba(66, 184, 131, 0.3);
+      transform: translateY(-5px);
+    }
+    
+    .contact-btn i {
+      margin-left: 10px;
+    }
+    
     /* فوتر */
     footer {
       text-align: center;
@@ -194,10 +301,55 @@
       transform: translateY(-5px);
     }
     
-    /* طراحی ریسپانسیو */
+    /* طراحی ریسپانسیو بهبود یافته */
     @media (max-width: 768px) {
+      body {
+        padding-top: 60px;
+      }
+      
+      nav {
+        padding: 8px 0;
+      }
+      
+      .logo {
+        font-size: 1.2rem;
+      }
+      
+      .hamburger {
+        display: block;
+      }
+      
+      .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background: rgba(26, 26, 46, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        padding: 80px 20px 20px;
+        gap: 10px;
+        transition: all 0.4s ease;
+        z-index: 999;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+        overflow-y: auto;
+      }
+      
+      .nav-links.active {
+        right: 0;
+      }
+      
+      .nav-links a {
+        width: 100%;
+        padding: 12px 20px;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        text-align: right;
+      }
+      
       header {
-        padding: 30px 20px;
+        padding: 30px 20px 20px;
       }
       
       header h1 {
@@ -209,7 +361,8 @@
       }
       
       section {
-        padding: 30px 20px;
+        padding: 25px 15px;
+        scroll-margin-top: 60px;
       }
       
       .info-item {
@@ -220,10 +373,79 @@
       .info-item i {
         margin-bottom: 15px;
       }
+      
+      .services {
+        grid-template-columns: 1fr;
+      }
+      
+      .direct-contact {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .contact-btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .logo {
+        font-size: 1.1rem;
+      }
+      
+      .nav-links {
+        width: 85%;
+      }
+      
+      header h1 {
+        font-size: 1.8rem;
+      }
+      
+      header p {
+        font-size: 1.1rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+      
+      .skill {
+        padding: 12px 20px;
+        font-size: 1rem;
+      }
+      
+      .contact-btn {
+        padding: 12px 20px;
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
+  <!-- نوار ناوبری بهبود یافته -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">
+        <i class="fas fa-calculator"></i>
+        <span>مهدی امیری</span>
+      </div>
+      
+      <button class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <div class="nav-links" id="navLinks">
+        <a href="#about" class="active">درباره من</a>
+        <a href="#education">تحصیلات</a>
+        <a href="#skills">مهارت‌ها</a>
+        <a href="#services">خدمات</a>
+        <a href="#experience">سوابق کاری</a>
+        <a href="#contact">تماس با من</a>
+      </div>
+    </div>
+  </nav>
+  
   <div class="container">
     <header>
       <h1>مهدی امیری</h1>
@@ -231,21 +453,14 @@
     </header>
     
     <main>
+      <!-- بخش درباره من -->
       <section id="about">
         <h2>درباره من</h2>
         <div class="info-item">
-          <i class="fas fa-user-graduate"></i>
+          <i class="fas fa-user"></i>
           <div class="info-text">
-            <h3>تحصیلات</h3>
-            <p>هنرجوی مقطع دوازدهم رشته حسابداری هنرستان شهید اینانلو با معدل سال پیش ۱۸.۳۳</p>
-          </div>
-        </div>
-        
-        <div class="info-item">
-          <i class="fas fa-briefcase"></i>
-          <div class="info-text">
-            <h3>تجربه کاری</h3>
-            <p>کارآموز حسابداری در شرکت کارن تجارت اورانوس/مدیران خودرو۳۵۳ (از اردیبهشت ۱۴۰۴ تا کنون)</p>
+            <h3>معرفی</h3>
+            <p>من مهدی امیری، یک حسابدار جوان و پرانگیزه هستم که به دنبال کسب تجربه و توسعه مهارت‌های حرفه‌ای در حوزه حسابداری می‌باشم. با اشتیاق فراوان به یادگیری و کار تیمی، آماده همکاری در محیط‌های حرفه‌ای هستم.</p>
           </div>
         </div>
         
@@ -258,6 +473,27 @@
         </div>
       </section>
       
+      <!-- بخش تحصیلات -->
+      <section id="education">
+        <h2>تحصیلات</h2>
+        <div class="info-item">
+          <i class="fas fa-user-graduate"></i>
+          <div class="info-text">
+            <h3>تحصیلات رسمی</h3>
+            <p>هنرجوی مقطع دوازدهم رشته حسابداری هنرستان شهید اینانلو با معدل سال پیش ۱۸.۳۳</p>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <i class="fas fa-certificate"></i>
+          <div class="info-text">
+            <h3>دوره‌های آموزشی</h3>
+            <p>دوره‌های تخصصی حسابداری مالی، حسابداری حقوق و دستمزد، و نرم‌افزارهای حسابداری</p>
+          </div>
+        </div>
+      </section>
+      
+      <!-- بخش مهارت‌ها -->
       <section id="skills">
         <h2>مهارت‌های من</h2>
         <div class="skills">
@@ -265,11 +501,14 @@
           <div class="skill">حسابداری خرید و فروش</div>
           <div class="skill">حسابداری اموال و انبار</div>
           <div class="skill">حسابداری حقوق و دستمزد</div>
-          <div class="skill">نرم افزارهای آفیس)</div>
+          <div class="skill">نرم افزارهای آفیس</div>
           <div class="skill">آشنایی با سیستم هایERP</div>
+          <div class="skill">تهیه گزارش‌های مالی</div>
+          <div class="skill">تحلیل داده‌های مالی</div>
         </div>
       </section>
       
+      <!-- بخش خدمات -->
       <section id="services">
         <h2>خدمات تخصصی</h2>
         <div class="services">
@@ -293,6 +532,28 @@
         </div>
       </section>
       
+      <!-- بخش سوابق کاری -->
+      <section id="experience">
+        <h2>سوابق کاری</h2>
+        <div class="info-item">
+          <i class="fas fa-briefcase"></i>
+          <div class="info-text">
+            <h3>کارآموز حسابداری</h3>
+            <p>شرکت کارن تجارت اورانوس/مدیران خودرو۳۵۳ (از اردیبهشت ۱۴۰۴ تا کنون)</p>
+            <p>مسئولیت‌ها: ثبت اسناد مالی، تهیه گزارش‌های اولیه، همکاری در امور انبارداری و حسابداری اموال</p>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <i class="fas fa-chart-pie"></i>
+          <div class="info-text">
+            <h3>فعالیت‌های جانبی</h3>
+            <p>همکاری در پروژه‌های دانش‌آموزی مرتبط با حسابداری، شرکت در کارگاه‌های آموزشی تخصصی</p>
+          </div>
+        </div>
+      </section>
+      
+      <!-- بخش تماس با من -->
       <section id="contact">
         <h2>تماس با من</h2>
         <div class="info-item">
@@ -310,6 +571,21 @@
             <p>amirizanganeh@gmail.com</p>
           </div>
         </div>
+        
+        <div class="direct-contact">
+          <a href="tel:+989100710569" class="contact-btn">
+            <i class="fas fa-phone"></i>
+            تماس تلفنی
+          </a>
+          <a href="mailto:amirizanganeh@gmail.com" class="contact-btn">
+            <i class="fas fa-envelope"></i>
+            ارسال ایمیل
+          </a>
+          <a href="https://wa.me/989100710569" target="_blank" class="contact-btn">
+            <i class="fab fa-whatsapp"></i>
+            واتساپ
+          </a>
+        </div>
       </section>
     </main>
     
@@ -317,10 +593,82 @@
       <div class="social-icons">
         <a href="https://t.me/+989100710569" target="_blank"><i class="fab fa-telegram"></i></a>
         <a href="https://wa.me/989100710569" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
       </div>
       <p>© ۱۴۰۴ - طراحی شده توسط مهدی امیری</p>
       <p>برای همکاری و پیشنهاد کار با من تماس بگیرید</p>
     </footer>
   </div>
+
+  <script>
+    // اسکریپت بهبود یافته برای ناوبری
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('navLinks');
+      const navItems = document.querySelectorAll('.nav-links a');
+      
+      // مدیریت منوی همبرگری
+      hamburger.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+        hamburger.innerHTML = navLinks.classList.contains('active') 
+          ? '<i class="fas fa-times"></i>' 
+          : '<i class="fas fa-bars"></i>';
+      });
+      
+      // بستن منو هنگام کلیک روی لینک‌ها
+      navItems.forEach(item => {
+        item.addEventListener('click', function() {
+          navLinks.classList.remove('active');
+          hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+        });
+      });
+      
+      // اسکرول نرم و فعال کردن لینک‌ها
+      navItems.forEach(link => {
+        link.addEventListener('click', function(e) {
+          // حذف کلاس active از همه لینک‌ها
+          navItems.forEach(l => l.classList.remove('active'));
+          
+          // افزودن کلاس active به لینک کلیک شده
+          this.classList.add('active');
+          
+          // اسکرول نرم
+          const targetId = this.getAttribute('href');
+          const targetSection = document.querySelector(targetId);
+          if (targetSection) {
+            e.preventDefault();
+            const offset = window.innerWidth <= 768 ? 60 : 80;
+            window.scrollTo({
+              top: targetSection.offsetTop - offset,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      
+      // تغییر وضعیت لینک‌ها هنگام اسکرول
+      window.addEventListener('scroll', function() {
+        const sections = document.querySelectorAll('section');
+        let current = '';
+        
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          const offset = window.innerWidth <= 768 ? 100 : 120;
+          
+          if (pageYOffset >= (sectionTop - offset)) {
+            current = section.getAttribute('id');
+          }
+        });
+        
+        navItems.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href').substring(1) === current) {
+            link.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
