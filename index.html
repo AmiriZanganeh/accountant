@@ -1,389 +1,178 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>مهدی امیری | حسابدار</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مهدی امیری</title>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
-      --primary: #7F5AF0;
-      --secondary: #2CB67D;
-      --dark: #16161A;
-      --light: #FFFFFF;
-      --text-light: #F0F0F0;
-      --text-dark: #333333;
-      --gray: #94A1B2;
-      --background: linear-gradient(135deg, #1a1a2e, #16213e);
+      --primary: #6a5af9;
+      --secondary: #42b883;
+      --light: #ffffff;
+      --dark: #121220;
+      --gray: #94a1b2;
     }
     
-    * { 
-      box-sizing: border-box; 
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
     
     body {
       font-family: 'Vazirmatn', sans-serif;
-      background: var(--background);
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
       color: var(--light);
       line-height: 1.8;
-      overflow-x: hidden;
       min-height: 100vh;
-      padding-bottom: 40px;
+      padding: 20px;
     }
     
-    /* نوار ناوبری */
-    nav {
-      background: rgba(10, 10, 20, 0.95);
-      backdrop-filter: blur(10px);
-      padding: 15px 5%;
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      font-size: 1.1rem;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-    
-    nav a {
-      color: var(--light);
-      text-decoration: none;
-      padding: 8px 18px;
-      border-radius: 30px;
-      transition: all 0.3s ease;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(255,255,255,0.05);
-    }
-    
-    nav a:hover, nav a.active {
-      background: rgba(127, 90, 240, 0.8);
-      color: white;
-    }
-    
-    nav a i {
-      font-size: 1.1rem;
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
     }
     
     /* هدر */
     header {
       text-align: center;
-      padding: 100px 20px 80px;
-      position: relative;
-      overflow: hidden;
-      background: rgba(0,0,0,0.2);
+      padding: 40px 20px;
       margin-bottom: 30px;
     }
     
-    header::before {
-      content: "";
-      position: absolute;
-      top: -50px;
-      right: -50px;
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      background: rgba(127, 90, 240, 0.15);
-      filter: blur(30px);
-    }
-    
-    header::after {
-      content: "";
-      position: absolute;
-      bottom: -80px;
-      left: -30px;
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      background: rgba(44, 182, 125, 0.15);
-      filter: blur(30px);
-    }
-    
     header h1 {
-      font-size: 2.8rem;
-      margin: 0;
-      animation: fadeInUp 0.8s ease both;
-      font-weight: 700;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.3);
-      position: relative;
-      z-index: 2;
+      font-size: 2.5rem;
+      margin-bottom: 15px;
       color: white;
-      letter-spacing: -1px;
+      font-weight: 700;
     }
     
     header p {
-      font-size: 1.5rem;
-      color: var(--text-light);
-      animation: fadeInUp 0.8s ease both;
-      animation-delay: 0.3s;
-      position: relative;
-      z-index: 2;
-      margin-top: 15px;
-      max-width: 700px;
-      margin: 20px auto 0;
-      font-weight: 400;
-      line-height: 1.6;
-    }
-    
-    .highlight {
+      font-size: 1.4rem;
       color: var(--secondary);
       font-weight: 600;
-      position: relative;
+      max-width: 600px;
+      margin: 0 auto;
     }
     
     /* بخش‌ها */
     section {
-      max-width: 1100px;
-      margin: 50px auto;
-      padding: 50px 40px;
+      background: rgba(255, 255, 255, 0.08);
       border-radius: 20px;
-      background: rgba(255, 255, 255, 0.07);
-      backdrop-filter: blur(12px);
-      text-align: center;
-      animation: fadeInUp 1s ease both;
+      padding: 40px;
+      margin-bottom: 30px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.15);
       border: 1px solid rgba(255,255,255,0.1);
-      position: relative;
-      overflow: hidden;
-    }
-    
-    section::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100px;
-      height: 100px;
-      background: linear-gradient(45deg, var(--primary), transparent);
-      border-radius: 0 0 0 100%;
-      z-index: 0;
     }
     
     h2 {
-      font-size: 2.2rem;
-      margin-bottom: 40px;
-      color: white;
-      position: relative;
-      display: inline-block;
-      font-weight: 700;
+      font-size: 1.8rem;
+      margin-bottom: 25px;
+      color: var(--secondary);
+      text-align: center;
       padding-bottom: 15px;
+      border-bottom: 2px solid var(--primary);
+      display: inline-block;
+      width: 100%;
     }
     
-    h2::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      right: 50%;
-      transform: translateX(50%);
-      width: 80px;
-      height: 4px;
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
-      border-radius: 10px;
-    }
-    
-    p {
-      font-size: 1.2rem;
-      color: var(--text-light);
-      margin: 15px 0;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.8;
-      font-weight: 400;
-    }
-    
-    .section-title {
-      font-size: 1.3rem;
-      color: var(--secondary);
-      font-weight: 600;
-      margin-bottom: 5px;
-      display: block;
-    }
-    
-    .section-content {
-      font-size: 1.2rem;
-      color: var(--text-light);
+    .info-item {
+      display: flex;
       margin-bottom: 20px;
-      display: block;
-      line-height: 1.8;
-    }
-    
-    /* کارت‌های خدمات */
-    .card-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 40px;
-    }
-    
-    .card {
-      background: rgba(255, 255, 255, 0.1);
-      color: white;
-      width: 300px;
-      padding: 35px 25px;
-      border-radius: 20px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.25);
-      animation: fadeInUp 1s ease both;
-      transition: all 0.4s ease;
-      border: 1px solid rgba(255,255,255,0.15);
-      backdrop-filter: blur(10px);
-      position: relative;
-      z-index: 2;
-    }
-    
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.35);
-      background: rgba(127, 90, 240, 0.15);
-    }
-    
-    .card h3 {
-      margin: 20px 0 15px;
-      font-size: 1.5rem;
-      color: white;
-      font-weight: 600;
-    }
-    
-    .card i {
-      font-size: 2.8rem;
-      color: var(--secondary);
-      display: block;
-      background: rgba(44, 182, 125, 0.1);
-      width: 80px;
-      height: 80px;
-      line-height: 80px;
-      border-radius: 50%;
-      margin: 0 auto 20px;
-    }
-    
-    .card p {
-      font-size: 1.15rem;
-      color: #e0e0e0;
-      line-height: 1.7;
-    }
-    
-    /* بخش مهارت‌ها */
-    .skills-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 40px;
-    }
-    
-    .skill {
-      width: 300px;
-      text-align: right;
       padding: 15px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
     }
     
-    .skill-info {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 12px;
-      font-size: 1.2rem;
-      color: white;
-      font-weight: 500;
-    }
-    
-    .skill-bar {
-      height: 14px;
-      background: rgba(255,255,255,0.1);
-      border-radius: 10px;
-      overflow: hidden;
-      position: relative;
-    }
-    
-    .skill-progress {
-      height: 100%;
-      border-radius: 10px;
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
-      position: relative;
-      width: 0;
-      transition: width 1.5s cubic-bezier(0.22, 0.61, 0.36, 1);
-    }
-    
-    /* بخش تماس */
-    .contact-info {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-      max-width: 900px;
-      margin: 40px auto 0;
-    }
-    
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      background: rgba(255,255,255,0.08);
-      padding: 22px 30px;
-      border-radius: 15px;
-      text-align: right;
-      transition: all 0.3s ease;
-      flex: 1;
-      min-width: 300px;
-      max-width: 400px;
-    }
-    
-    .contact-item:hover {
-      background: rgba(127, 90, 240, 0.15);
-      transform: translateY(-5px);
-    }
-    
-    .contact-item i {
-      font-size: 2.2rem;
+    .info-item i {
+      font-size: 1.8rem;
       color: var(--secondary);
       min-width: 50px;
-      text-align: center;
+      padding-top: 5px;
     }
     
-    .contact-text {
+    .info-text {
       flex-grow: 1;
     }
     
-    .contact-text strong {
-      display: block;
-      font-size: 1.25rem;
-      margin-bottom: 8px;
+    .info-text h3 {
+      font-size: 1.3rem;
       color: white;
+      margin-bottom: 5px;
     }
     
-    .contact-text p {
-      margin: 0;
-      font-size: 1.15rem;
-      color: var(--text-light);
+    .info-text p {
+      font-size: 1.1rem;
+      color: var(--gray);
+    }
+    
+    /* مهارت‌ها */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    
+    .skill {
+      background: rgba(106, 90, 249, 0.15);
+      padding: 15px 25px;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      color: white;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    /* خدمات */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    
+    .service {
+      background: rgba(255,255,255,0.1);
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    
+    .service:hover {
+      transform: translateY(-10px);
+      background: rgba(106, 90, 249, 0.2);
+    }
+    
+    .service i {
+      font-size: 2.5rem;
+      color: var(--secondary);
+      margin-bottom: 20px;
+      display: block;
+    }
+    
+    .service h3 {
+      font-size: 1.3rem;
+      color: white;
+      margin-bottom: 15px;
     }
     
     /* فوتر */
     footer {
-      background: rgba(10, 10, 20, 0.95);
       text-align: center;
       padding: 40px 20px;
-      font-size: 1.05rem;
+      margin-top: 40px;
       color: var(--gray);
-      margin-top: 80px;
-      backdrop-filter: blur(5px);
       border-top: 1px solid rgba(255,255,255,0.1);
-    }
-    
-    footer p {
-      margin: 10px 0;
     }
     
     .social-icons {
       display: flex;
       justify-content: center;
-      gap: 25px;
+      gap: 20px;
       margin: 25px 0;
     }
     
@@ -391,8 +180,8 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 55px;
-      height: 55px;
+      width: 50px;
+      height: 50px;
       background: rgba(255,255,255,0.1);
       color: white;
       border-radius: 50%;
@@ -405,252 +194,133 @@
       transform: translateY(-5px);
     }
     
-    /* انیمیشن‌ها */
-    @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(40px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-    
-    @keyframes progress {
-      0% { width: 0; }
-    }
-    
     /* طراحی ریسپانسیو */
-    @media (max-width: 992px) {
-      header h1 { font-size: 2.4rem; }
-      header p { font-size: 1.3rem; }
-    }
-    
     @media (max-width: 768px) {
-      header { padding: 80px 20px 60px; }
-      header h1 { font-size: 2.1rem; }
-      header p { font-size: 1.2rem; }
-      h2 { font-size: 1.9rem; }
-      nav { gap: 10px; font-size: 1rem; padding: 12px 3%; }
-      nav a { padding: 8px 15px; }
-      section { padding: 35px 25px; margin: 30px 20px; }
-      .card { width: 100%; max-width: 400px; }
-      .skill { width: 100%; }
-      .contact-item { padding: 20px; }
-      .section-title, .section-content { text-align: center; }
-    }
-    
-    @media (max-width: 576px) {
-      header { padding: 70px 15px 50px; }
-      header h1 { font-size: 1.9rem; }
-      header p { font-size: 1.15rem; }
-      h2 { font-size: 1.7rem; margin-bottom: 30px; }
-      nav { flex-wrap: wrap; }
-      nav a { font-size: 0.95rem; padding: 8px 14px; }
-      p, .section-content { font-size: 1.1rem; }
-      .contact-item { flex-direction: column; text-align: center; min-width: 100%; }
-      .contact-item i { margin-bottom: 15px; }
-      .card { padding: 30px 20px; }
-      .card i { width: 70px; height: 70px; line-height: 70px; font-size: 2.2rem; }
-      .social-icons a { width: 50px; height: 50px; font-size: 1.3rem; }
+      header {
+        padding: 30px 20px;
+      }
+      
+      header h1 {
+        font-size: 2rem;
+      }
+      
+      header p {
+        font-size: 1.2rem;
+      }
+      
+      section {
+        padding: 30px 20px;
+      }
+      
+      .info-item {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .info-item i {
+        margin-bottom: 15px;
+      }
     }
   </style>
 </head>
 <body>
-
-  <nav>
-    <a href="#about" class="active"><i class="fas fa-user"></i> درباره من</a>
-    <a href="#skills"><i class="fas fa-chart-bar"></i> مهارت‌ها</a>
-    <a href="#services"><i class="fas fa-cogs"></i> خدمات</a>
-    <a href="#resume"><i class="fas fa-file-alt"></i> سوابق</a>
-    <a href="#contact"><i class="fas fa-phone"></i> تماس</a>
-  </nav>
-
-  <header>
-    <h1>سلام! من مهدی امیری هستم</h1>
-    <p><span class="highlight">حسابدار تازه‌کار</span> | کمک حسابدار و کارآموز حسابداری با انگیزه و علاقه‌مند به یادگیری</p>
-  </header>
-
-  <section id="about">
-    <h2>درباره من</h2>
-    <span class="section-title">تحصیلات:</span>
-    <span class="section-content">هنرجو مقطع دوازدهم رشته حسابداری هنرستان شهید اینانلو با معدل سال پیش ۱۸/۸۱</span>
+  <div class="container">
+    <header>
+      <h1>مهدی امیری</h1>
+      <p>حسابدار تازه کار | کمک حسابدار و کارآموز حسابداری</p>
+    </header>
     
-    <span class="section-title">تخصص:</span>
-    <span class="section-content">مسلط به اصول حسابداری و مباحثی همچون خرید و فروش، اموال و انبار، حقوق و دستمزد</span>
+    <main>
+      <section id="about">
+        <h2>درباره من</h2>
+        <div class="info-item">
+          <i class="fas fa-user-graduate"></i>
+          <div class="info-text">
+            <h3>تحصیلات</h3>
+            <p>هنرجوی مقطع دوازدهم رشته حسابداری هنرستان شهید اینانلو با معدل سال پیش ۱۸.۳۳</p>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <i class="fas fa-briefcase"></i>
+          <div class="info-text">
+            <h3>تجربه کاری</h3>
+            <p>کارآموز حسابداری در شرکت کارن تجارت اورانوس/مدیران خودرو۳۵۳ (از اردیبهشت ۱۴۰۴ تا کنون)</p>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <i class="fas fa-language"></i>
+          <div class="info-text">
+            <h3>زبان‌ها</h3>
+            <p>فارسی (زبان مادری)، انگلیسی (حرفه ای)</p>
+          </div>
+        </div>
+      </section>
+      
+      <section id="skills">
+        <h2>مهارت‌های من</h2>
+        <div class="skills">
+          <div class="skill">اصول حسابداری مالی</div>
+          <div class="skill">حسابداری خرید و فروش</div>
+          <div class="skill">حسابداری اموال و انبار</div>
+          <div class="skill">حسابداری حقوق و دستمزد</div>
+          <div class="skill">نرم افزارهای آفیس)</div>
+          <div class="skill">آشنایی با سیستم هایERP</div>
+        </div>
+      </section>
+      
+      <section id="services">
+        <h2>خدمات تخصصی</h2>
+        <div class="services">
+          <div class="service">
+            <i class="fas fa-file-invoice"></i>
+            <h3>ثبت اسناد حسابداری</h3>
+            <p>ثبت دقیق معاملات روزانه در نرم‌افزارهای حسابداری</p>
+          </div>
+          
+          <div class="service">
+            <i class="fas fa-chart-line"></i>
+            <h3>تهیه گزارش های مالی</h3>
+            <p>تهیه ترازنامه ، صورت سود و زیان ، گزارش های پایه</p>
+          </div>
+          
+          <div class="service">
+            <i class="fas fa-calculator"></i>
+            <h3>کمک در امور مالیاتی</h3>
+            <p>همکاری در تهیه اظهارنامه و گزارش‌های مالیاتی</p>
+          </div>
+        </div>
+      </section>
+      
+      <section id="contact">
+        <h2>تماس با من</h2>
+        <div class="info-item">
+          <i class="fas fa-phone"></i>
+          <div class="info-text">
+            <h3>شماره تماس</h3>
+            <p>۰۹۱۰۰۷۱۰۵۶۹</p>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <div class="info-text">
+            <h3>ایمیل</h3>
+            <p>amirizanganeh@gmail.com</p>
+          </div>
+        </div>
+      </section>
+    </main>
     
-    <span class="section-title">زبان:</span>
-    <span class="section-content">فارسی، انگلیسی (در حد مکالمه و متون تخصصی)</span>
-    
-    <span class="section-title">درباره من:</span>
-    <span class="section-content">جوانی پرانرژی و با انگیزه هستم که به دنبال فرصتی برای به کارگیری دانش حسابداری خود در محیط کار واقعی می‌باشم. به جزئیات توجه زیادی دارم و توانایی یادگیری سریع مفاهیم جدید را دارم.</span>
-  </section>
-
-  <section id="skills">
-    <h2>مهارت‌های من</h2>
-    <div class="skills-container">
-      <div class="skill">
-        <div class="skill-info">
-          <span>نرم‌افزارهای آفیس (ورد، اکسل)</span>
-          <span>۸۵٪</span>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-progress" style="width: 85%;"></div>
-        </div>
+    <footer>
+      <div class="social-icons">
+        <a href="https://t.me/+989100710569" target="_blank"><i class="fab fa-telegram"></i></a>
+        <a href="https://wa.me/989100710569" target="_blank"><i class="fab fa-whatsapp"></i></a>
       </div>
-      
-      <div class="skill">
-        <div class="skill-info">
-          <span>نرم‌افزارهای حسابداری (هلو، سپیدار)</span>
-          <span>۷۵٪</span>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-progress" style="width: 75%;"></div>
-        </div>
-      </div>
-      
-      <div class="skill">
-        <div class="skill-info">
-          <span>زبان انگلیسی</span>
-          <span>۷۰٪</span>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-progress" style="width: 70%;"></div>
-        </div>
-      </div>
-      
-      <div class="skill">
-        <div class="skill-info">
-          <span>اصول حسابداری مالی</span>
-          <span>۹۰٪</span>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-progress" style="width: 90%;"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="services">
-    <h2>خدمات تخصصی</h2>
-    <div class="card-container">
-      <div class="card">
-        <i class="fas fa-book"></i>
-        <h3>ثبت اسناد حسابداری</h3>
-        <p>ثبت معاملات روزانه در نرم‌افزارهای حسابداری با دقت و جزئیات کامل و رعایت استانداردهای حسابداری</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-chart-line"></i>
-        <h3>تهیه گزارش مالی</h3>
-        <p>تهیه ترازنامه، صورت سود و زیان و گزارش‌های مالی پایه به صورت دوره‌ای و با جزئیات دقیق</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-file-invoice-dollar"></i>
-        <h3>کمک در امور مالیاتی</h3>
-        <p>همکاری در تهیه اظهارنامه و گزارش‌های مالیاتی با رعایت قوانین و مقررات مالیاتی روز</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="resume">
-    <h2>سوابق کاری و تحصیلی</h2>
-    <div style="background-color: rgba(255,255,255,0.1); padding: 30px; border-radius: 15px; max-width: 700px; margin: 30px auto;">
-      <div style="display: flex; align-items: center; gap: 25px;">
-        <div style="background: var(--primary); width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-          <i class="fas fa-briefcase" style="font-size: 2rem; color: white;"></i>
-        </div>
-        <div style="text-align: right;">
-          <h3 style="margin-bottom: 8px; color: white; font-size: 1.6rem;">کارآموز حسابداری</h3>
-          <p style="margin: 0; font-size: 1.2rem;"><strong>شرکت کارن تجارت اورانوس (مدیران خودرو۳۵۳)</strong></p>
-          <p style="margin: 8px 0 0; color: var(--secondary); font-size: 1.1rem;">۱۴۰۴/۲/۳۰ - اکنون</p>
-        </div>
-      </div>
-    </div>
-    
-    <div style="background-color: rgba(255,255,255,0.1); padding: 30px; border-radius: 15px; max-width: 700px; margin: 30px auto;">
-      <div style="display: flex; align-items: center; gap: 25px;">
-        <div style="background: var(--secondary); width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-          <i class="fas fa-graduation-cap" style="font-size: 2rem; color: white;"></i>
-        </div>
-        <div style="text-align: right;">
-          <h3 style="margin-bottom: 8px; color: white; font-size: 1.6rem;">دیپلم حسابداری</h3>
-          <p style="margin: 0; font-size: 1.2rem;"><strong>هنرستان شهید اینانلو</strong></p>
-          <p style="margin: 8px 0 0; color: var(--secondary); font-size: 1.1rem;">۱۴۰۲ - اکنون | معدل: ۱۸/۸۱</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>راه‌های ارتباطی</h2>
-    <div class="contact-info">
-      <div class="contact-item">
-        <i class="fas fa-phone"></i>
-        <div class="contact-text">
-          <strong>شماره تماس</strong>
-          <p>۰۹۱۰۰۷۱۰۵۶۹</p>
-        </div>
-      </div>
-      
-      <div class="contact-item">
-        <i class="fas fa-envelope"></i>
-        <div class="contact-text">
-          <strong>ایمیل</strong>
-          <p>amirizanganeh@gmail.com</p>
-        </div>
-      </div>
-      
-      <div class="contact-item">
-        <i class="fas fa-map-marker-alt"></i>
-        <div class="contact-text">
-          <strong>آدرس</strong>
-          <p>تهران، ایران</p>
-        </div>
-      </div>
-      
-      <div class="contact-item">
-        <i class="fas fa-clock"></i>
-        <div class="contact-text">
-          <strong>ساعات کاری</strong>
-          <p>شنبه تا چهارشنبه: ۸ صبح تا ۴ بعدازظهر</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="social-icons">
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-telegram"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
-      <a href="#"><i class="fab fa-whatsapp"></i></a>
-    </div>
-    <p>© ۱۴۰۴ تمامی حقوق این وب‌سایت محفوظ است</p>
-    <p>طراحی و توسعه توسط <strong style="color: var(--secondary);">مهدی امیری</strong></p>
-  </footer>
-
-  <script>
-    // فعال کردن انیمیشن نوار مهارت‌ها هنگام اسکرول
-    document.addEventListener('DOMContentLoaded', function() {
-      const skillBars = document.querySelectorAll('.skill-progress');
-      
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const skillBar = entry.target;
-            skillBar.style.width = skillBar.style.width;
-          }
-        });
-      }, { threshold: 0.5 });
-      
-      skillBars.forEach(bar => {
-        observer.observe(bar);
-      });
-      
-      // فعال سازی لینک‌های ناوبری
-      const navLinks = document.querySelectorAll('nav a');
-      navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-          navLinks.forEach(l => l.classList.remove('active'));
-          this.classList.add('active');
-        });
-      });
-    });
-  </script>
+      <p>© ۱۴۰۴ - طراحی شده توسط مهدی امیری</p>
+      <p>برای همکاری و پیشنهاد کار با من تماس بگیرید</p>
+    </footer>
+  </div>
 </body>
 </html>
