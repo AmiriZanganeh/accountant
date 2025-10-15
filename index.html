@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>مهدی امیری زنگنه - کارآموز حسابداری</title>
+  <title>مهدی امیری زنگنه</title>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
@@ -16,9 +16,15 @@
       --gray: #7d8fa1;
       --light-bg: #f8f9fa;
       --card-bg: #f0f7f9;
-      --text-primary: #333333;
-      --text-secondary: #555555;
-      --text-light: #777777;
+      
+      /* مقیاس فونت ریسپانسیو */
+      --font-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.9rem);
+      --font-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1.1rem);
+      --font-base: clamp(1rem, 0.9rem + 0.5vw, 1.3rem);
+      --font-lg: clamp(1.125rem, 1rem + 0.625vw, 1.5rem);
+      --font-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.75rem);
+      --font-2xl: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+      --font-3xl: clamp(1.875rem, 1.6rem + 1.375vw, 2.5rem);
     }
     
     * {
@@ -28,22 +34,25 @@
     }
     
     html {
-      font-size: 16px;
-      scroll-behavior: smooth;
+      font-size: 16px; /* پایه فونت */
     }
     
     body {
       font-family: 'Vazirmatn', sans-serif;
       background-color: var(--light-bg);
-      color: var(--text-primary);
+      color: #333;
       line-height: 1.7;
       min-height: 100vh;
       padding-top: 70px;
       background: linear-gradient(135deg, #e6f7ff 0%, #f0f7f9 100%);
+      font-size: var(--font-base);
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
     
     .container {
-      max-width: 1000px;
+      max-width: min(1000px, 95%);
       margin: 0 auto;
       padding: 20px;
     }
@@ -55,22 +64,22 @@
       left: 0;
       width: 100%;
       background: var(--dark);
-      padding: 15px 0;
+      padding: clamp(10px, 1.5vw, 15px) 0;
       z-index: 1000;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
     
     .nav-container {
-      max-width: 1000px;
+      max-width: min(1000px, 95%);
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0 20px;
+      padding: 0 clamp(15px, 2vw, 20px);
     }
     
     .logo {
-      font-size: 1.3rem;
+      font-size: var(--font-lg);
       font-weight: 700;
       color: var(--light);
       display: flex;
@@ -84,21 +93,17 @@
     
     .nav-links {
       display: flex;
-      gap: 15px;
+      gap: clamp(10px, 1.5vw, 15px);
     }
     
     .nav-links a {
       color: var(--light);
       text-decoration: none;
-      font-size: 1rem;
+      font-size: var(--font-sm);
       font-weight: 500;
       padding: 6px 12px;
       border-radius: 4px;
-      transition: all 0.3s ease;
-    }
-    
-    .nav-links a:hover {
-      background: rgba(255,255,255,0.1);
+      white-space: nowrap;
     }
     
     .nav-links a.active {
@@ -112,7 +117,7 @@
       background: none;
       border: none;
       color: var(--light);
-      font-size: 1.5rem;
+      font-size: var(--font-xl);
       cursor: pointer;
       padding: 5px;
     }
@@ -122,8 +127,7 @@
       position: fixed;
       top: 0;
       right: -100%;
-      width: 80%;
-      max-width: 300px;
+      width: min(80%, 300px);
       height: 100vh;
       background: var(--dark);
       z-index: 1100;
@@ -141,10 +145,10 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px;
+      padding: clamp(15px, 3vw, 20px);
       background: var(--primary);
       color: white;
-      font-size: 1.2rem;
+      font-size: var(--font-lg);
       font-weight: 600;
     }
     
@@ -152,14 +156,14 @@
       background: none;
       border: none;
       color: white;
-      font-size: 1.5rem;
+      font-size: var(--font-xl);
       cursor: pointer;
     }
     
     .mobile-menu-links {
       display: flex;
       flex-direction: column;
-      padding: 20px;
+      padding: clamp(15px, 3vw, 20px);
       overflow-y: auto;
       flex-grow: 1;
     }
@@ -167,17 +171,18 @@
     .mobile-menu-links a {
       color: white;
       text-decoration: none;
-      padding: 15px 10px;
+      padding: clamp(12px, 2vw, 15px) 10px;
       margin-bottom: 10px;
       border-radius: 5px;
       display: flex;
       align-items: center;
       transition: all 0.2s;
+      font-size: var(--font-base);
     }
     
     .mobile-menu-links a i {
       margin-left: 10px;
-      font-size: 1.2rem;
+      font-size: var(--font-lg);
     }
     
     .mobile-menu-links a:hover,
@@ -205,7 +210,7 @@
     /* بقیه استایل ها */
     header {
       text-align: center;
-      padding: 40px 20px;
+      padding: clamp(30px, 5vw, 40px) clamp(15px, 3vw, 20px);
       margin-bottom: 20px;
       background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
       border-radius: 8px;
@@ -214,24 +219,25 @@
     }
     
     header h1 {
-      font-size: 2.2rem;
+      font-size: var(--font-3xl);
       margin-bottom: 10px;
       color: var(--light);
-      font-weight: 700;
+      line-height: 1.3;
     }
     
     header p {
-      font-size: 1.3rem;
+      font-size: var(--font-lg);
       color: rgba(255,255,255,0.9);
       font-weight: 500;
       max-width: 600px;
       margin: 0 auto;
+      line-height: 1.5;
     }
     
     section {
       background: var(--card-bg);
       border-radius: 8px;
-      padding: 30px;
+      padding: clamp(20px, 3vw, 30px);
       margin-bottom: 20px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.05);
       scroll-margin-top: 80px;
@@ -239,7 +245,7 @@
     }
     
     h2 {
-      font-size: 1.7rem;
+      font-size: var(--font-2xl);
       margin-bottom: 20px;
       color: var(--primary);
       text-align: center;
@@ -247,13 +253,13 @@
       border-bottom: 2px solid var(--accent);
       display: inline-block;
       width: 100%;
-      font-weight: 600;
+      line-height: 1.4;
     }
     
     .info-item {
       display: flex;
       margin-bottom: 15px;
-      padding: 15px;
+      padding: clamp(12px, 2vw, 15px);
       background: var(--light);
       border-radius: 8px;
       align-items: flex-start;
@@ -261,7 +267,7 @@
     }
     
     .info-item i {
-      font-size: 1.5rem;
+      font-size: var(--font-xl);
       color: var(--accent);
       min-width: 40px;
       padding-top: 3px;
@@ -272,72 +278,70 @@
     }
     
     .info-text h3 {
-      font-size: 1.2rem;
+      font-size: var(--font-lg);
       color: var(--dark);
       margin-bottom: 5px;
-      font-weight: 600;
+      line-height: 1.4;
     }
     
     .info-text p {
-      font-size: 1.1rem;
-      color: var(--text-secondary);
-      line-height: 1.8;
+      font-size: var(--font-base);
+      color: #555;
+      line-height: 1.6;
     }
     
     .skills-container {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
       gap: 15px;
       margin-top: 20px;
     }
     
     .skill-item {
       background: var(--light);
-      padding: 15px;
+      padding: clamp(12px, 2vw, 15px);
       border-radius: 8px;
       text-align: center;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      /* انیمیشن حذف شده */
     }
     
     .skill-item h3 {
-      font-size: 1.1rem;
+      font-size: var(--font-base);
       color: var(--dark);
-      font-weight: 500;
+      line-height: 1.4;
     }
     
     .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
       gap: 20px;
       margin-top: 20px;
     }
     
     .service {
       background: var(--light);
-      padding: 20px;
+      padding: clamp(15px, 2.5vw, 20px);
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
       text-align: center;
-      /* انیمیشن حذف شده */
     }
     
     .service i {
-      font-size: 2rem;
+      font-size: var(--font-2xl);
       color: var(--accent);
       margin-bottom: 15px;
       display: block;
     }
     
     .service h3 {
-      font-size: 1.2rem;
+      font-size: var(--font-lg);
       color: var(--dark);
       margin-bottom: 10px;
-      font-weight: 600;
+      line-height: 1.4;
     }
     
     .service p {
-      color: var(--text-secondary);
+      color: #555;
       line-height: 1.6;
     }
     
@@ -352,15 +356,16 @@
     .contact-btn {
       display: inline-flex;
       align-items: center;
-      padding: 12px 25px;
+      padding: clamp(10px, 1.5vw, 12px) clamp(20px, 2.5vw, 25px);
       background: var(--accent);
       border-radius: 4px;
       color: var(--dark);
       text-decoration: none;
       font-weight: 600;
-      font-size: 1rem;
+      font-size: var(--font-sm);
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       transition: all 0.3s ease;
+      white-space: nowrap;
     }
     
     .contact-btn:hover {
@@ -375,7 +380,7 @@
     
     footer {
       text-align: center;
-      padding: 30px 20px;
+      padding: clamp(20px, 3vw, 30px) clamp(15px, 3vw, 20px);
       margin-top: 40px;
       color: var(--gray);
       border-top: 1px solid #ddecee;
@@ -394,12 +399,12 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 45px;
-      height: 45px;
+      width: clamp(40px, 5vw, 45px);
+      height: clamp(40px, 5vw, 45px);
       background: var(--primary);
       color: white;
       border-radius: 50%;
-      font-size: 1.3rem;
+      font-size: var(--font-lg);
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       transition: all 0.3s ease;
     }
@@ -412,16 +417,17 @@
     .download-btn {
       display: inline-flex;
       align-items: center;
-      padding: 12px 25px;
+      padding: clamp(10px, 1.5vw, 12px) clamp(20px, 2.5vw, 25px);
       background: var(--secondary);
       border-radius: 4px;
       color: white;
       text-decoration: none;
       font-weight: 600;
-      font-size: 1rem;
+      font-size: var(--font-sm);
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       margin: 15px auto;
       transition: all 0.3s ease;
+      white-space: nowrap;
     }
     
     .download-btn:hover {
@@ -462,38 +468,20 @@
       margin-bottom: 10px;
     }
     
-    /* استایل‌های واکنش‌گرا */
-    @media (max-width: 992px) {
-      html {
-        font-size: 15px;
-      }
-      
-      .container {
-        padding: 15px;
-      }
-      
-      header h1 {
-        font-size: 2rem;
-      }
-      
-      header p {
-        font-size: 1.2rem;
-      }
-      
-      section {
-        padding: 25px;
-      }
-      
-      h2 {
-        font-size: 1.6rem;
-      }
+    /* استایل جدید برای بخش درباره من - آیکون در وسط */
+    #about .info-item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    #about .info-item i {
+      margin-bottom: 15px;
+      font-size: var(--font-xl);
+      color: var(--accent);
     }
     
     @media (max-width: 768px) {
-      html {
-        font-size: 14px;
-      }
-      
       body {
         padding-top: 60px;
       }
@@ -503,7 +491,7 @@
       }
       
       .logo {
-        font-size: 1.1rem;
+        font-size: var(--font-base);
       }
       
       .nav-links {
@@ -515,24 +503,20 @@
       }
       
       header {
-        padding: 30px 15px;
+        padding: clamp(25px, 4vw, 30px) clamp(12px, 2vw, 15px);
       }
       
       header h1 {
-        font-size: 1.8rem;
+        font-size: var(--font-2xl);
       }
       
       header p {
-        font-size: 1.1rem;
+        font-size: var(--font-base);
       }
       
       section {
-        padding: 20px 15px;
+        padding: clamp(15px, 2.5vw, 20px) clamp(12px, 2vw, 15px);
         scroll-margin-top: 60px;
-      }
-      
-      h2 {
-        font-size: 1.5rem;
       }
       
       .info-item {
@@ -564,60 +548,48 @@
       }
     }
     
-    @media (max-width: 576px) {
-      html {
-        font-size: 13px;
+    /* بهبود برای نمایش در صفحات بسیار کوچک */
+    @media (max-width: 480px) {
+      body {
+        padding-top: 55px;
       }
       
       .container {
         padding: 10px;
       }
       
-      header {
-        padding: 25px 10px;
-      }
-      
       header h1 {
-        font-size: 1.6rem;
+        font-size: var(--font-xl);
       }
       
       header p {
-        font-size: 1rem;
-      }
-      
-      section {
-        padding: 15px 10px;
+        font-size: var(--font-sm);
       }
       
       h2 {
-        font-size: 1.4rem;
+        font-size: var(--font-xl);
       }
       
-      .info-item {
-        padding: 12px;
+      .info-text h3 {
+        font-size: var(--font-base);
       }
       
-      .service, .skill-item {
-        padding: 15px 10px;
+      .info-text p {
+        font-size: var(--font-sm);
       }
       
-      .contact-btn, .download-btn {
-        padding: 10px 20px;
-      }
-    }
-    
-    @media (max-width: 400px) {
-      html {
-        font-size: 12px;
+      .service h3 {
+        font-size: var(--font-base);
       }
       
-      .mobile-menu {
-        width: 85%;
+      .service p {
+        font-size: var(--font-sm);
       }
     }
   </style>
 </head>
 <body>
+  <!-- محتوای HTML بدون تغییر باقی می‌ماند -->
   <nav>
     <div class="nav-container">
       <div class="logo">
@@ -662,7 +634,7 @@
   
   <div class="container">
     <header>
-      <h1>مهدی امیری زنگنه</h1>
+      <h1>مهدی امیری</h1>
       <p>کارآموز حسابداری / کمک حسابدار</p>
     </header>
     
@@ -672,8 +644,8 @@
         <div class="info-item">
           <i class="fas fa-user"></i>
           <div class="info-text">
-            <p>من حسابدار جوان و پرانگیزه‌ای هستم که با اشتیاق فراوان به دنبال کسب تجربه و توسعه مهارت‌های حرفه‌ای در حوزه حسابداری می‌باشم. به عنوان یک حسابدار تازه‌کار همواره در حال یادگیری و بهبود مهارت‌های خود هستم.</p>
-            <p>هدف من به کارگیری دانش آکادمیک و مهارت‌های عملی در یک محیط پویا و رشد در زمینه حسابداری است و به دنبال فرصتی هستم که بتوانم توانایی‌های خود را به نمایش گذاشته و در کنار حرفه‌ای‌ها تجربه کسب کنم.</p>
+            <p>من حسابدار جوان و پرانگیزه ای هستم که با اشتیاق فراوان به دنبال کسب تجربه و توسعه مهارت های حرفه ای در حوزه حسابداری می باشم و به عنوان یک حسابدار تازه کار همواره در حال یادگیری و بهبود مهارت های خود هستم. </p>
+            <p> هدف من به کارگیری دانش آکادمیک و مهارت های عملی در یک محیط پویا و رشد در زمینه حسابداری است و به دنبال فرصتی هستم که بتوانم توانایی های خود را به نمایش گذاشته و در کنار حرفه ای ها تجربه کسب کنم.</p>
           </div>
         </div>
       </section>
@@ -692,7 +664,7 @@
           <i class="fas fa-certificate"></i>
           <div class="info-text">
             <h3>دوره‌های آموزشی</h3>
-            <p>دوره ICDL آموزشگاه فنی و حرفه‌ای کارا</p>
+            <p>دوره ICDL آموزشگاه فنی و حرفه ای کارا </p>
           </div>
         </div>
       </section>
@@ -721,15 +693,15 @@
           </div>
 
           <div class="skill-item">
-            <h3>تهیه و تنظیم صورت‌های مالی</h3>
+            <h3>حسابداری تهیه و تنظیم صورت های مالی</h3>
           </div>
           
           <div class="skill-item">
-            <h3>نرم‌افزار Word & Excel</h3>
+            <h3>نرم افزار Word & Excel</h3>
           </div>
 
           <div class="skill-item">
-            <h3>نرم‌افزار حسابداری باتیز</h3>
+            <h3>نرم افزار حسابداری باتیز</h3>
           </div>
 
           <div class="skill-item">
@@ -749,8 +721,8 @@
           
           <div class="service">
             <i class="fas fa-chart-line"></i>
-            <h3>تهیه گزارش‌های مالی</h3>
-            <p>تهیه ترازنامه، صورت سود و زیان، گزارش‌های پایه</p>
+            <h3>تهیه گزارش های مالی</h3>
+            <p>تهیه ترازنامه ، صورت سود و زیان ، گزارش های پایه</p>
           </div>
           
           <div class="service">
@@ -760,15 +732,15 @@
           </div>
 
           <div class="service">
-            <i class="fas fa-book"></i>
-            <h3>تنظیم دفاتر قانونی</h3>
-            <p>تنظیم دفاتر روزنامه، کل، معین</p>
+            <i class="fas fa-book "></i>
+            <h3>تنظیم دفاتر قانونی </h3>
+            <p>تنظیم دفاتر روزنامه ، کل ، معین </p>
           </div>
 
           <div class="service">
             <i class="fas fa-university"></i> 
-            <h3>مغایرت‌گیری بانکی</h3>
-            <p>تطبیق مانده حساب‌های بانکی با دفاتر شرکت و رفع مغایرت‌ها</p>
+            <h3>مغایرت گیری بانکی</h3>
+            <p>تطبیق مانده حساب های بانکی با دفاتر شرکت و رفع مغایرت ها</p>
           </div>
         </div>
       </section>
@@ -787,7 +759,7 @@
         <div class="info-item">
           <i class="fas fa-car-side"></i>
           <div class="info-text">
-            <h3>کارآموز حسابداری</h3>
+            <h3>کارآموز حسابداری </h3>
             <p>مدیران خودرو نمایندگی ۳۵۳ لطفی پور</p>
             <p>۱۴۰۴/۲/۳۰ – ۱۴۰۴/۵/۱۱</p>
           </div>
@@ -813,10 +785,10 @@
             <i class="fab fa-telegram"></i>
             تلگرام
           </a>
-          <a href="https://instagram.com/amirizanganeh" target="_blank" class="contact-btn">
-            <i class="fab fa-instagram"></i>
-            اینستاگرام
-          </a>
+       <a href="https://instagram.com/amirizanganeh " target="_blank" class="contact-btn">
+          <i class="fab fa-instagram"></i>
+          اینستاگرام
+       </a>
         </div>
       </section>
     </main>
@@ -824,13 +796,14 @@
     <footer>
       <a href="https://s34.picofile.com/file/8487017776/%D8%B1%D9%88%D8%B2%D9%85%D9%87_%D8%AD%D8%B3%D8%A7%D8%A8%D8%AF%D8%A7%D8%B1_.pdf.html" target="_blank" class="download-btn">
         <i class="fas fa-download"></i>
-        دانلود رزومه
+       دانلود رزومه
       </a>
       <p>برای همکاری و پیشنهاد کار با من تماس بگیرید</p>
     </footer>
   </div>
 
   <script>
+    // اسکریپت جاوااسکریپت بدون تغییر باقی می‌ماند
     document.addEventListener('DOMContentLoaded', function() {
       const hamburgerBtn = document.getElementById('hamburgerBtn');
       const closeBtn = document.getElementById('closeBtn');
