@@ -17,14 +17,14 @@
       --light-bg: #f8f9fa;
       --card-bg: #f0f7f9;
       
-      /* مقیاس فونت ریسپانسیو */
-      --font-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.9rem);
-      --font-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1.1rem);
-      --font-base: clamp(1rem, 0.9rem + 0.5vw, 1.3rem);
-      --font-lg: clamp(1.125rem, 1rem + 0.625vw, 1.5rem);
-      --font-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.75rem);
-      --font-2xl: clamp(1.5rem, 1.3rem + 1vw, 2rem);
-      --font-3xl: clamp(1.875rem, 1.6rem + 1.375vw, 2.5rem);
+      /* مقیاس فونت ریسپانسیو - بهبود یافته برای دسکتاپ */
+      --font-xs: clamp(0.7rem, 0.65rem + 0.25vw, 0.85rem);
+      --font-sm: clamp(0.8rem, 0.75rem + 0.25vw, 0.95rem);
+      --font-base: clamp(0.9rem, 0.85rem + 0.25vw, 1.05rem);
+      --font-lg: clamp(1rem, 0.9rem + 0.5vw, 1.2rem);
+      --font-xl: clamp(1.1rem, 1rem + 0.5vw, 1.35rem);
+      --font-2xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+      --font-3xl: clamp(1.5rem, 1.3rem + 1vw, 1.8rem);
     }
     
     * {
@@ -34,7 +34,7 @@
     }
     
     html {
-      font-size: 16px; /* پایه فونت */
+      font-size: 16px;
     }
     
     body {
@@ -589,7 +589,6 @@
   </style>
 </head>
 <body>
-  <!-- محتوای HTML بدون تغییر باقی می‌ماند -->
   <nav>
     <div class="nav-container">
       <div class="logo">
@@ -803,7 +802,6 @@
   </div>
 
   <script>
-    // اسکریپت جاوااسکریپت بدون تغییر باقی می‌ماند
     document.addEventListener('DOMContentLoaded', function() {
       const hamburgerBtn = document.getElementById('hamburgerBtn');
       const closeBtn = document.getElementById('closeBtn');
