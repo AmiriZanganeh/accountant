@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="رزومه مهدی امیری">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="رزومه مهدی امیری" />
   <title>مهدی امیری</title>
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     :root {
       --primary: #2a5a7c;
@@ -292,7 +292,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(min(150px, 100%), 1fr));
       gap: clamp(8px, 1.5vw, 10px);
-      margin-top: 0px; /* حذف فاصله اضافی برای هماهنگی با سایر بخش‌ها */
+      margin-top: 0px;
     }
     
     .skill-item {
@@ -314,7 +314,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
       gap: clamp(10px, 2vw, 15px);
-      margin-top: 0px; /* حذف فاصله اضافی برای هماهنگی با سایر بخش‌ها */
+      margin-top: 0px;
     }
     
     .service {
@@ -340,7 +340,7 @@
     }
     
     .service p {
-      color: #555;
+      color: #000000;  /* مشکی */
       line-height: 1.5;
       font-size: var(--font-sm);
     }
@@ -364,11 +364,8 @@
       font-weight: 600;
       font-size: var(--font-sm);
       box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-      /* transition حذف شد */
       white-space: nowrap;
     }
-    
-    /* transition و transform حذف شد */
     
     .contact-btn i {
       margin-left: 6px;
@@ -424,11 +421,8 @@
       font-size: var(--font-sm);
       box-shadow: 0 1px 3px rgba(0,0,0,0.1);
       margin: 12px auto;
-      /* transition و transform حذف شد */
       white-space: nowrap;
     }
-    
-    /* transition و transform حذف شد */
     
     .download-btn i {
       margin-left: 6px;
@@ -439,6 +433,10 @@
     #about .info-text {
       text-align: right;
       direction: rtl;
+    }
+    
+    #about .info-text p {
+      color: #000000;  /* مشکی برای متن درباره من */
     }
     
     #education .info-item,
@@ -670,7 +668,7 @@
   <div class="container">
     <header>
       <h1>مهدی امیری</h1>
-      <p>حسابدار مالی و مالیاتی</p>
+      <p></p>
     </header>
     
     <main>
@@ -679,7 +677,6 @@
         <div class="info-item">
           <div class="info-text">
             <p>دانش آموخته رشته حسابداری با تسلط بر نرم افزار ها و اصول حسابداری هستم که توانایی بالایی در کار تیمی، حل مسئله و انجام دقیق امور مالی و مالیاتی دارم.</p>
-            <p>سرعت عمل بالا در کنار دقت مثال زدنی، ویژگی ای است که کار من را تعریف می کند.</p>
             <p> هدف من به کارگیری دانش آکادمیک و مهارت های عملی در یک محیط پویا و رشد در زمینه حسابداری است و به دنبال فرصتی هستم که بتوانم توانایی های خود را به نمایش گذاشته و در کنار حرفه ای ها تجربه کسب کنم.</p>
           </div>
         </div>
@@ -690,8 +687,7 @@
         <div class="info-item">
           <div class="info-text">
             <h3>تحصیلات رسمی</h3>
-            <p>دانشجوی رشته حسابداری مقطع کاردانی دانشگاه ...</p>
-            <p>دیپلم حسابداری هنرستان شهید اینانلو </p>
+            <p>دیپلم حسابداری هنرستان شهید محمد اینانلو </p>
           </div>
         </div>
         
@@ -737,10 +733,6 @@
           <div class="skill-item">
             <h5>نرم افزار حسابداری سپیدار</h5>
           </div>
-
-          <div class="skill-item">
-            <h5>نرم افزار حسابداری باتیز</h5>
-          </div>
         </div>
       </section>
       
@@ -778,23 +770,11 @@
           <div class="service">
             <p>نظارت بر محاسبات و سیستم های حسابداری</p>
           </div>
-
-          <div class="service">
-            <p>مشاوره و ارائه راهکار های مختلف مالیاتی</p>
-          </div>
         </div>
       </section>
       
       <section id="experience">
         <h2>سوابق کاری</h2>
-        <div class="info-item">
-          <div class="info-text">
-            <h3>حسابدار مالی و مالیاتی</h3>
-            <p>شاخص نوین ققنوس</p>
-            <p>ادریبهشت ۱۴۰۵ – اکنون</p>
-          </div>
-        </div>
-        
         <div class="info-item">
           <div class="info-text">
             <h3>کارآموز حسابداری</h3>
@@ -823,8 +803,6 @@
     
     <footer>
       <p>برای همکاری و پیشنهاد کار تماس بگیرید</p>
-      <a href="" class="download-btn">
-        دانلود رزومه
       </a>
     </footer>
   </div>
