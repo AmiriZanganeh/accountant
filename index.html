@@ -339,10 +339,16 @@
       line-height: 1.3;
     }
     
+    /* ===== اعمال رنگ یکسان برای متن بخش خدمات و مهارت‌ها ===== */
     .service p {
-      color: #000000;  /* مشکی */
+      color: var(--dark);        /* همانند رنگ h5 در skill-item */
       line-height: 1.5;
-      font-size: var(--font-sm);
+      font-size: var(--font-sm); /* بدون تغییر در اندازه */
+    }
+    
+    /* ===== رنگ متن درباره من ===== */
+    #about .info-text p {
+      color: var(--dark);        /* کاملاً همرنگ با متن مهارت‌ها */
     }
     
     .direct-contact {
@@ -433,10 +439,6 @@
     #about .info-text {
       text-align: right;
       direction: rtl;
-    }
-    
-    #about .info-text p {
-      color: #000000;  /* مشکی برای متن درباره من */
     }
     
     #education .info-item,
@@ -779,7 +781,7 @@
           <div class="info-text">
             <h3>کارآموز حسابداری</h3>
             <p>پویان حساب امیدان پایتخت</p>
-            <p>شهریور ۱۴۰۴ – خرداد ۱۴۰۴</p>
+            <p>خرداد ۱۴۰۴ – شهریور ۱۴۰۴</p>
           </div>
         </div>
       </section>
