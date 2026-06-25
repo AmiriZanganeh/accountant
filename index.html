@@ -44,7 +44,7 @@
       color: #000000;
       line-height: 1.6;
       min-height: 100vh;
-      padding-top: clamp(50px, 8vw, 70px);
+      padding-top: clamp(45px, 7vw, 60px);
       background: linear-gradient(135deg, #e6f7ff 0%, #f0f7f9 100%);
       font-size: var(--font-base);
     }
@@ -52,7 +52,7 @@
     .container {
       max-width: min(1000px, 95%);
       margin: 0 auto;
-      padding: clamp(8px, 1.5vw, 15px);
+      padding: clamp(4px, 0.8vw, 8px) clamp(10px, 1.5vw, 15px);
     }
     
     /* نوار ناوبری */
@@ -62,7 +62,7 @@
       left: 0;
       width: 100%;
       background: var(--dark);
-      padding: clamp(6px, 1vw, 10px) 0;
+      padding: clamp(4px, 0.7vw, 7px) 0;
       z-index: 1000;
       box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
@@ -92,7 +92,7 @@
     
     .nav-links {
       display: flex;
-      gap: clamp(5px, 1vw, 10px);
+      gap: clamp(3px, 0.6vw, 6px);
     }
     
     .nav-links a {
@@ -100,7 +100,7 @@
       text-decoration: none;
       font-size: var(--font-sm);
       font-weight: 500;
-      padding: clamp(3px, 0.5vw, 5px) clamp(6px, 1vw, 10px);
+      padding: clamp(2px, 0.4vw, 4px) clamp(5px, 0.8vw, 8px);
       border-radius: 3px;
       white-space: nowrap;
     }
@@ -144,7 +144,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: clamp(10px, 2vw, 15px);
+      padding: clamp(8px, 1.5vw, 12px);
       background: var(--primary);
       color: white;
       font-size: var(--font-base);
@@ -165,7 +165,7 @@
     .mobile-menu-links {
       display: flex;
       flex-direction: column;
-      padding: clamp(10px, 2vw, 15px);
+      padding: clamp(8px, 1.5vw, 12px);
       overflow-y: auto;
       flex-grow: 1;
       align-items: center;
@@ -174,8 +174,8 @@
     .mobile-menu-links a {
       color: white;
       text-decoration: none;
-      padding: clamp(8px, 1.5vw, 12px) clamp(6px, 1vw, 10px);
-      margin-bottom: 8px;
+      padding: clamp(6px, 1vw, 10px) clamp(6px, 1vw, 10px);
+      margin-bottom: 6px;
       border-radius: 4px;
       display: flex;
       align-items: center;
@@ -210,8 +210,8 @@
     /* هدر اصلی */
     header {
       text-align: center;
-      padding: clamp(15px, 3vw, 25px) clamp(10px, 2vw, 15px);
-      margin-bottom: clamp(10px, 2vw, 15px);
+      padding: clamp(10px, 1.8vw, 16px) clamp(10px, 2vw, 15px);
+      margin-bottom: clamp(6px, 1vw, 10px);
       background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
       border-radius: 6px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -220,7 +220,7 @@
     
     header h1 {
       font-size: var(--font-2xl);
-      margin-bottom: 8px;
+      margin-bottom: 4px;
       color: var(--light);
       line-height: 1.3;
     }
@@ -237,19 +237,19 @@
     section {
       background: var(--card-bg);
       border-radius: 6px;
-      padding: clamp(12px, 2vw, 20px);
-      margin-bottom: clamp(10px, 2vw, 15px);
+      padding: clamp(8px, 1.2vw, 12px) clamp(10px, 1.5vw, 15px);
+      margin-bottom: clamp(6px, 1vw, 10px);
       box-shadow: 0 1px 5px rgba(0,0,0,0.05);
-      scroll-margin-top: clamp(50px, 8vw, 70px);
+      scroll-margin-top: clamp(45px, 7vw, 60px);
       border: 1px solid #ddecee;
     }
     
     h2 {
       font-size: var(--font-xl);
-      margin-bottom: clamp(12px, 2vw, 15px);
+      margin-bottom: clamp(6px, 1vw, 10px);
       color: var(--primary);
       text-align: center;
-      padding-bottom: 8px;
+      padding-bottom: 4px;
       border-bottom: 1px solid var(--accent);
       display: inline-block;
       width: 100%;
@@ -258,8 +258,8 @@
     
     .info-item {
       display: flex;
-      margin-bottom: clamp(8px, 1.5vw, 12px);
-      padding: clamp(8px, 1.5vw, 12px);
+      margin-bottom: clamp(4px, 0.6vw, 6px);
+      padding: clamp(6px, 1vw, 10px);
       background: var(--light);
       border-radius: 5px;
       align-items: flex-start;
@@ -280,7 +280,7 @@
     .info-text h3 {
       font-size: var(--font-base);
       color: #000000;
-      margin-bottom: 4px;
+      margin-bottom: 2px;
       line-height: 1.3;
     }
     
@@ -288,18 +288,19 @@
       font-size: var(--font-sm);
       color: #000000;
       line-height: 1.5;
+      margin-bottom: 0;
     }
     
     .skills-container {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(min(150px, 100%), 1fr));
-      gap: clamp(8px, 1.5vw, 10px);
+      gap: clamp(4px, 0.6vw, 6px);
       margin-top: 0px;
     }
     
     .skill-item {
       background: var(--light);
-      padding: clamp(8px, 1.5vw, 10px);
+      padding: clamp(6px, 1vw, 8px);
       border-radius: 5px;
       text-align: center;
       box-shadow: 0 1px 3px rgba(0,0,0,0.05);
@@ -310,18 +311,19 @@
       color: #000000;
       line-height: 1.3;
       font-weight: 600;
+      margin: 0;
     }
     
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
-      gap: clamp(10px, 2vw, 15px);
+      gap: clamp(4px, 0.6vw, 6px);
       margin-top: 0px;
     }
     
     .service {
       background: var(--light);
-      padding: clamp(10px, 2vw, 15px);
+      padding: clamp(6px, 1vw, 10px);
       border-radius: 5px;
       box-shadow: 0 1px 3px rgba(0,0,0,0.05);
       text-align: center;
@@ -330,14 +332,14 @@
     .service i {
       font-size: var(--font-lg);
       color: var(--accent);
-      margin-bottom: 10px;
+      margin-bottom: 4px;
       display: block;
     }
     
     .service h3 {
       font-size: var(--font-base);
       color: #000000;
-      margin-bottom: 8px;
+      margin-bottom: 4px;
       line-height: 1.3;
     }
     
@@ -345,20 +347,21 @@
       color: #000000;
       line-height: 1.5;
       font-size: var(--font-sm);
+      margin: 0;
     }
     
     .direct-contact {
       display: flex;
       flex-wrap: wrap;
-      gap: clamp(8px, 1.5vw, 10px);
+      gap: clamp(4px, 0.6vw, 6px);
       justify-content: center;
-      margin-top: 15px;
+      margin-top: 6px;
     }
     
     .contact-btn {
       display: inline-flex;
       align-items: center;
-      padding: clamp(6px, 1vw, 8px) clamp(12px, 2vw, 16px);
+      padding: clamp(4px, 0.6vw, 6px) clamp(10px, 1.5vw, 14px);
       background: var(--accent);
       border-radius: 3px;
       color: var(--dark);
@@ -376,8 +379,8 @@
     
     footer {
       text-align: center;
-      padding: clamp(12px, 2vw, 20px) clamp(10px, 2vw, 15px);
-      margin-top: 20px;
+      padding: clamp(8px, 1.2vw, 14px) clamp(10px, 2vw, 15px);
+      margin-top: clamp(4px, 0.6vw, 8px);
       color: #000000;
       border-top: 1px solid #ddecee;
       background: var(--card-bg);
@@ -389,7 +392,7 @@
       display: flex;
       justify-content: center;
       gap: 10px;
-      margin: 15px 0;
+      margin: 10px 0;
     }
     
     .social-icons a {
@@ -414,7 +417,7 @@
     .download-btn {
       display: inline-flex;
       align-items: center;
-      padding: clamp(6px, 1vw, 8px) clamp(12px, 2vw, 16px);
+      padding: clamp(4px, 0.6vw, 6px) clamp(10px, 1.5vw, 14px);
       background: var(--secondary);
       border-radius: 3px;
       color: white;
@@ -422,7 +425,7 @@
       font-weight: 600;
       font-size: var(--font-sm);
       box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-      margin: 12px auto;
+      margin: 6px auto;
       white-space: nowrap;
     }
     
@@ -459,7 +462,7 @@
     #education .info-item i,
     #experience .info-item i,
     #contact .info-item i {
-      margin-bottom: 8px;
+      margin-bottom: 4px;
     }
     
     /* استایل جدید برای بخش درباره من - آیکون در وسط */
@@ -470,7 +473,7 @@
     }
     
     #about .info-item i {
-      margin-bottom: 10px;
+      margin-bottom: 6px;
       font-size: var(--font-lg);
       color: var(--accent);
     }
@@ -478,11 +481,11 @@
     /* استایل ریسپانسیو برای موبایل */
     @media (max-width: 768px) {
       body {
-        padding-top: clamp(45px, 7vw, 55px);
+        padding-top: clamp(40px, 6vw, 50px);
       }
       
       nav {
-        padding: 5px 0;
+        padding: 3px 0;
       }
       
       .logo {
@@ -498,7 +501,8 @@
       }
       
       header {
-        padding: clamp(12px, 2.5vw, 18px) clamp(8px, 1.5vw, 12px);
+        padding: clamp(8px, 1.8vw, 14px) clamp(8px, 1.5vw, 12px);
+        margin-bottom: clamp(4px, 0.8vw, 6px);
       }
       
       header h1 {
@@ -510,23 +514,26 @@
       }
       
       section {
-        padding: clamp(10px, 1.8vw, 15px) clamp(8px, 1.5vw, 12px);
-        scroll-margin-top: clamp(45px, 7vw, 55px);
+        padding: clamp(6px, 1.2vw, 10px) clamp(6px, 1.2vw, 10px);
+        margin-bottom: clamp(4px, 0.8vw, 6px);
+        scroll-margin-top: clamp(40px, 6vw, 50px);
       }
       
       .info-item {
         flex-direction: column;
         text-align: center;
         align-items: center;
+        padding: clamp(4px, 0.8vw, 8px);
+        margin-bottom: clamp(3px, 0.5vw, 5px);
       }
       
       .info-item i {
-        margin-bottom: 8px;
+        margin-bottom: 4px;
       }
       
       .services {
         grid-template-columns: 1fr;
-        gap: 10px;
+        gap: 4px;
       }
       
       .direct-contact {
@@ -541,7 +548,7 @@
       
       .skills-container {
         grid-template-columns: 1fr;
-        gap: 8px;
+        gap: 4px;
       }
       
       .mobile-menu {
@@ -552,11 +559,11 @@
     /* بهبود برای نمایش در صفحات بسیار کوچک */
     @media (max-width: 480px) {
       body {
-        padding-top: 45px;
+        padding-top: 38px;
       }
       
       .container {
-        padding: 5px;
+        padding: 3px;
       }
       
       header h1 {
@@ -569,7 +576,7 @@
       
       h2 {
         font-size: var(--font-lg);
-        margin-bottom: 10px;
+        margin-bottom: 4px;
       }
       
       .info-text h3 {
@@ -597,7 +604,8 @@
       }
       
       footer {
-        padding: 10px 8px;
+        padding: 6px 6px;
+        margin-top: 4px;
       }
     }
     
@@ -805,7 +813,6 @@
     
     <footer>
       <p>برای همکاری و پیشنهاد کار تماس بگیرید</p>
-      </a>
     </footer>
   </div>
 
@@ -850,7 +857,7 @@
             
             setTimeout(() => {
               window.scrollTo({
-                top: targetSection.offsetTop - 70,
+                top: targetSection.offsetTop - 60,
                 behavior: 'smooth'
               });
             }, 300);
@@ -865,7 +872,7 @@
         
         sections.forEach(section => {
           const sectionTop = section.offsetTop;
-          const offset = 100;
+          const offset = 80;
           
           if (pageYOffset >= (sectionTop - offset)) {
             current = section.getAttribute('id');
