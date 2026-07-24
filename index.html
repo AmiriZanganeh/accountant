@@ -285,7 +285,20 @@
       margin-bottom: 0;
     }
     
-    /* ===== بخش مهارت‌ها ===== */
+    /* استایل لینک شماره تلفن - بدون ظاهر دکمه */
+    .phone-link {
+      color: #000000;
+      text-decoration: none;
+      font-size: var(--font-sm);
+      font-weight: 400;
+      transition: color 0.2s ease;
+    }
+    
+    .phone-link:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+    
     .skills-container {
       display: flex;
       flex-wrap: wrap;
@@ -304,7 +317,6 @@
       min-width: clamp(100px, 12vw, 150px);
       max-width: 100%;
       border: 1px solid #e8f0f2;
-      /* انیمیشن حذف شد */
     }
     
     .skill-item h5 {
@@ -315,7 +327,6 @@
       margin: 0;
       white-space: nowrap;
     }
-    /* ===== پایان بخش مهارت‌ها ===== */
     
     .services {
       display: grid;
@@ -359,25 +370,6 @@
       gap: clamp(4px, 0.6vw, 6px);
       justify-content: center;
       margin-top: 6px;
-    }
-    
-    .contact-btn {
-      display: inline-flex;
-      align-items: center;
-      padding: clamp(4px, 0.6vw, 6px) clamp(10px, 1.5vw, 14px);
-      background: var(--accent);
-      border-radius: 3px;
-      color: var(--dark);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: var(--font-sm);
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-      white-space: nowrap;
-    }
-    
-    .contact-btn i {
-      margin-left: 6px;
-      font-size: var(--font-sm);
     }
     
     footer {
@@ -540,7 +532,7 @@
         align-items: center;
       }
       
-      .contact-btn, .download-btn {
+      .download-btn {
         width: 100%;
         justify-content: center;
       }
@@ -599,10 +591,6 @@
       }
       
       .service p {
-        font-size: var(--font-xs);
-      }
-      
-      .contact-btn, .download-btn {
         font-size: var(--font-xs);
       }
       
@@ -796,14 +784,13 @@
         <div class="info-item">
           <div class="info-text">
             <h3>شماره تماس</h3>
-            <p>۰۹۱۰۰۷۱۰۵۶۹</p>
+            <!-- شماره تلفن به صورت لینک ساده و بدون ظاهر دکمه -->
+            <p>
+              <a href="tel:+989100710569" class="phone-link">
+                ۰۹۱۰۰۷۱۰۵۶۹
+              </a>
+            </p>
           </div>
-        </div>
-        
-        <div class="direct-contact">
-          <a href="tel:+989100710569" class="contact-btn">
-            تماس تلفنی
-          </a>
         </div>
       </section>
     </main>
